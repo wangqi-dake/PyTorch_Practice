@@ -7,13 +7,13 @@ torch.manual_seed(1)
 # ===============================  exmaple 1 ===============================
 # 通过torch.tensor创建张量
 #
-# flag = True
-flag = False
+flag = True
+# flag = False
 if flag:
     arr = np.ones((3, 3))
     print("ndarray的数据类型：", arr.dtype)
     # 创建存放在 GPU 的数据
-    # t = torch.tensor(arr, device='cuda')
+    t = torch.tensor(arr, device='cuda')
     t= torch.tensor(arr)
     print(t)
 # ===============================  exmaple 2 ===============================
@@ -76,8 +76,8 @@ if flag:
 
 # ===============================  exmaple 7 ===============================
 # 通过torch.normal创建正态分布张量
-flag = True
-# flag = False
+# flag = True
+flag = False
 if flag:
 
     # mean：张量 std: 张量
